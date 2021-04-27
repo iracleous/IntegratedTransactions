@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Entity
@@ -12,7 +13,7 @@ public class AccountPerson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private LocalDateTime registrationDate;
+    private Date registrationDate;
 
     @ManyToOne
     private Person person;

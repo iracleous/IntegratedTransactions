@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,8 +19,8 @@ public class Person {
     @Column(unique = true)
     private String email;
 
-    private LocalDateTime dateOfBirth;
-    private LocalDateTime registrationDate;
+    private Date dateOfBirth;
+    private Date registrationDate;
 
     @OneToMany(mappedBy="person")
     private List<AccountPerson> accountPersons;

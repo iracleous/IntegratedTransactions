@@ -31,4 +31,12 @@ public class ViewController {
         return "person";
     }
 
+    @RequestMapping(value = "addperson", method = RequestMethod.GET)
+    public String addPerson() {
+
+
+
+        return "addPerson";
+    }
+
 }

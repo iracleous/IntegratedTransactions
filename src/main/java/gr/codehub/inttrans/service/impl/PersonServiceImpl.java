@@ -39,7 +39,10 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public PersonDto addPerson(PersonDto personDto) {
-        return null;
+        Person person = personDto.getPerson();
+        personRepository.save(person);
+        PersonDto personDto1 = new PersonDto(person);
+        return personDto1;
     }
 
     @Override
