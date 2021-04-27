@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.id}">1</td>
+            <td><a href="#" th:text="${person.email}">Title ...</a></td>
+            <td th:text="${person.name}">Text ...</td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>
